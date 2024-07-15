@@ -1,0 +1,108 @@
+*{
+    font-family: sans-serif;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+}
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    padding-top: 4vh;
+}
+.align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.turn-container{
+    width: 170px;
+    height: 80px;
+    margin: auto;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+}
+.turn-container h3{
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.turn-container .turn-box{
+    border: 3px solid white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    height: 37px;
+    margin-top: 40px;
+    position: relative;
+}
+.turn-container .turn-box:nth-child(even){
+    border-right: none;
+}
+.turn-container .turn-box::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 3px;
+    height: 40px;
+    background-color: #ffffff;
+    z-index: -1;
+
+}
+
+.bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85px;
+    height: 40px;
+    background-color: #4169e1;
+    z-index: -1;
+}
+.cell{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    border: 2px solid;
+    box-shadow: 0 0 0 2px;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+    background-color: black;
+}
+.cell:hover{
+    background-color: #4169e1;
+}
+ 
+#gameContainer{
+    text-align: center;
+}
+#cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+    margin-top: 30px;
+}
+#statusText{
+  margin-top: 40px;
+}
+#restartBtn{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#restartBtn:hover{
+    transform: translateY(-6px);
+    background-color: #7df9ff;
+    color: black;
+    cursor: pointer;
+}
